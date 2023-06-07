@@ -12,8 +12,6 @@ int check_cycle(listint_t *head)
 
 	if (head == NULL)
 		return (0);
-	if (!head || !head->next)
-		return (0);
 	while (Tortoise != Hare)
 	{
 		if (!Hare || !Hare->next)
