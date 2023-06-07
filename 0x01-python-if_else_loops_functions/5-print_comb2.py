@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for i in range(10):
-    for j in range(10):
-        if (i != 9 and j != 9):
-            print("{}{}, ".format(i, j), end="")
-print(99)
+for num in range(100):
+    if num // 10 != 9 and num % 10 != 9:
+        print("{:d}, ".format(num), end="")
+    elif num == 99:
+        print(num)
