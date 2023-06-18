@@ -15,9 +15,10 @@ int check_cycle(listint_t *head)
 	Hare = head->next;
 	while (Tortoise != Hare)
 	{
+		if (!Hare || !Hare->next)
+			return (0);
 		Tortoise = Tortoise->next;
 		Hare = Hare->next->next;
 	}
 	return (1);
 }
-
