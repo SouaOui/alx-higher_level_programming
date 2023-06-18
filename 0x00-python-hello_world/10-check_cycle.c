@@ -4,20 +4,20 @@
  * @head: pointer to a list
  * Return: 1 if yess and 0 if NO
  */
-#include "lists.h"
 int check_cycle(listint_t *head)
 {
-	listint_t *Tortoise = head;
-	listint_t *Hare = head->next;
+	listint_t *Tortoise;
+	listint_t *Hare;
 
 	if (head == NULL)
 		return (0);
+	Tortoise = head;
+	Hare = head->next;
 	while (Tortoise != Hare)
 	{
-		if (!Hare || !Hare->next)
-			return (0);
 		Tortoise = Tortoise->next;
 		Hare = Hare->next->next;
 	}
 	return (1);
 }
+
