@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""My First class"""
+"""define a class Square that can calcule a square of a number."""
+
 
 class Square:
-    """"This is a class of Square that calculate a number"""
+    """Represent a square operation"""
     pass
