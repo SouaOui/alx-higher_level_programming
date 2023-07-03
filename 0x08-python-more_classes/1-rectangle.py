@@ -1,4 +1,4 @@
-/bin/bash: wq: command not found
+#!/usr/bin/python3
 """
 Declaring a class Rectangle and defining methods
 """
