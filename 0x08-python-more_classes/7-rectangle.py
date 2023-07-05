@@ -74,10 +74,10 @@ class Rectangle:
         rectangle = []
         for i in range(self.__height):
             for j in range(self.__width):
-                rectangle.append(self.print_symbol)
+                rectangle.append(str(self.print_symbol))
             if (i < self.__height - 1):
                 rectangle.append("\n")
-        return "".join(rectangle)
+        return str("".join(rectangle))
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
