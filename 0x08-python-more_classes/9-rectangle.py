@@ -70,7 +70,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return (cls(size, size))
+        return (cls(int(size), int(size)))
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
@@ -101,3 +101,4 @@ class Rectangle:
         if rect_1.area() < rect_2.area():
             return rect_2
         return rect_1
+    
