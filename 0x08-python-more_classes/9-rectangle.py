@@ -30,8 +30,8 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     @property
@@ -99,4 +99,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """turn rectangle to square"""
-        return cls(size, size)
+        new_rectangle = cls()
+        new_rectangle.width = size
+        new_rectangle.height = size
+        return new_rectangle
