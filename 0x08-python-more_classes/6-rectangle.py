@@ -7,7 +7,7 @@ Declaring a class Rectangle and defining methods
 class Rectangle:
     """define a class of Rectangle"""
     number_of_instances = 0
-
+    
     def __init__(self, width=0, height=0):
         """
         init method
@@ -32,7 +32,7 @@ class Rectangle:
         self.__height = height
         self.__width = width
         Rectangle.number_of_instances += 1
-
+        
     @property
     def height(self):
         return self.__height
