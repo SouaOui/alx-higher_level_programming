@@ -3,6 +3,7 @@
 Addition Module
 """
 
+
 def add_integer(a, b=98):
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
@@ -12,4 +13,4 @@ def add_integer(a, b=98):
         a = int(a)
     if isinstance(b, float):
         b = int(b)
-    return a + b 
+    return a + b
