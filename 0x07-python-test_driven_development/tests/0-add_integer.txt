@@ -10,31 +10,47 @@ This is an example text file
 	>>> add_integer = __import__('0-add_integer').add_integer
 
 	Now use it:
+    
     >>> add_integer(2)
     100
+
     >>> add_integer()
     Traceback (most recent call last):
     ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
     >>> add_integer(2, 4)
     6
-    >>> add_integer(3, 'a')
+
+    >>> add_integer(3, '2')
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
+
     >>> add_integer('aaa', 4)
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
     >>> add_integer(4, "Best")
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
+
     >>> add_integer(-3)
     95
+
     >>> add_integer(-2, 15.7) 
     13
+
     >>> add_integer("a", "b")
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+    >>> type(add_integer(1, 2))
+    <class 'int'>
+
+    >>> add_integer(float("nan"), 4)
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
