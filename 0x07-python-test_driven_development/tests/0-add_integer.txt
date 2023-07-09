@@ -54,3 +54,10 @@ This is an example text file
     >>> add_integer(float("nan"), 4)
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(float("inf"), 5)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(10/float("inf"), 6)
+    6
