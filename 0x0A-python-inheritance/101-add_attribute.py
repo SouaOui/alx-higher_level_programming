@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""define add attribute"""
+
 
 def add_attribute(obj, attr_name, attr_value):
     """add attribute and raise error"""
