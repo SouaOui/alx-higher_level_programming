@@ -5,17 +5,17 @@
 >>> example.integer_validator("positive", 0)
 Traceback (most recent call last):
 ...
-ValueError: <name> must be greater than 0
+ValueError: positive must be greater than 0
 
 >>> example.integer_validator("cup", -5)
 Traceback (most recent call last):
 ...
-ValueError: <name> must be greater than 0
+ValueError: cup must be greater than 0
 
 >>> example.integer_validator("mark", "logo")
 Traceback (most recent call last):
 ...
-TypeError: <name> must be an integer
+TypeError: mark must be an integer
 
 >>> example.integer_validator("max_clock", 24)
 
