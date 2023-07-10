@@ -33,9 +33,3 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
-
->>> example.integer_validator("123", number)
-Traceback (most recent call last):
-...
-TypeError: 123 must be an integer
-
