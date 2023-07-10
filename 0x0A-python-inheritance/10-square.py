@@ -9,8 +9,7 @@ class Square(Rectangle):
         """Intialize a new Rectangle.
 
         Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
+            size (int): The height of the new Rectangle.
         """
         self.integer_validator("size", size)
         super().__init__(size, size)
