@@ -3,6 +3,8 @@
 
 
 class MyInt(int):
+    """invert this two operators"""
+
     def __eq__(self, other):
         """is equal"""
         return self.real != other
