@@ -2,7 +2,6 @@
 """
 Define a class of Student
 """
-class_to_json = __import__('8-class_to_json').class_to_json
 
 class Student:
     def __init__(self, first_name, last_name, age):
