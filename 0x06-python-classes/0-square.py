@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""define a class Square that can calcule a square of a number."""
+"""define a class Square that can calculate a square of a number."""
 
 
 class Square:
