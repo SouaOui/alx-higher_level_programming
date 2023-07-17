@@ -33,5 +33,5 @@ class Square(Rectangle):
         new_string = ""
         new_string += "[square] "
         new_string += "({}) {}/{} ".format(self.id, self.x, self.y)
-        new_string += "- {}".format(self.size)
+        new_string += "- {}".format(self.width)
         return new_string
