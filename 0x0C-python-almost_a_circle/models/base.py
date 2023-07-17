@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Create a new class Base"""
+
+
 class Base:
     """Create a class Base"""
     __nb_objects = 0
