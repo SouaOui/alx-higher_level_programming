@@ -101,7 +101,7 @@ class Rectangle(Base):
         attributes_name = ["id", "width", "height", "x", "y"]
         for i, arg in enumerate(args):
             setattr(self, attributes_name[i], arg)
-            
+
     def __str__(self):
         """print the information of a class in good way"""
         new_string = ""
