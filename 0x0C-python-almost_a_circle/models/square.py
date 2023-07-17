@@ -30,3 +30,13 @@ class Square(Rectangle):
         new_string += "({}) {}/{} ".format(self.id, self.x, self.y)
         new_string += "- {}".format(self.width)
         return new_string
+
+    def update(self, *args, **kwargs):
+        """public method to update attributes"""
+        attributes_name = ["id", "size", "x", "y"]
+        if args:
+            for i, arg in enumerate(args):
+                setattr(self, attributes_name[i], arg)
+        for key, value in kwargs.items():
+            if key in attributes_name:
+                setattr(self, key, value)
