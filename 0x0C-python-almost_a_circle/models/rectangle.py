@@ -17,7 +17,7 @@ class Base:
 
 class Rectangle(Base):
     """Write the class Rectangle that inherits from Base"""
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """initialize fields for the Rectangle class"""
         super().__init__(id)
