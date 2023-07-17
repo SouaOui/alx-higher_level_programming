@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Create a SubClass from Rectangle Class (SubClass of Base)"""
+from models.base import Base
 from models.rectangle import Rectangle
 
 
