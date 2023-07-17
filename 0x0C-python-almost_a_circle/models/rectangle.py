@@ -96,11 +96,15 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update Public method assign an argument to each attribute"""
         attributes_name = ["id", "width", "height", "x", "y"]
-        for i, arg in enumerate(args):
-            setattr(self, attributes_name[i], arg)
+        if args:
+            for i, arg in enumerate(args):
+                setattr(self, attributes_name[i], arg)
+        for key, value in kwargs.items():
+            if key in attributes_name:
+                setattr(self, key, value)
 
     def __str__(self):
         """print the information of a class in good way"""
