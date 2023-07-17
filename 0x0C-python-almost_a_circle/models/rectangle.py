@@ -2,6 +2,7 @@
 """Create a SubClass from Base Class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Write the class Rectangle that inherits from Base"""
 
