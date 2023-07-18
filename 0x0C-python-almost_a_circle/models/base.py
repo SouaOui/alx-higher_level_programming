@@ -52,3 +52,4 @@ class Base:
         if new_dummy:
             new_dummy.update(**dictionary)
             return new_dummy
+        return

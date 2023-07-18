@@ -25,11 +25,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """print the information of a class in good way"""
-        new_string = ""
-        new_string += "[square] "
-        new_string += "({}) {}/{} ".format(self.id, self.x, self.y)
-        new_string += "- {}".format(self.width)
-        return new_string
+        return "[square] ({}) {}/{} - {}\
+                      ".format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
         """public method to update attributes"""
@@ -37,9 +34,10 @@ class Square(Rectangle):
         if args:
             for i, arg in enumerate(args):
                 setattr(self, attributes_name[i], arg)
-        for key, value in kwargs.items():
-            if key in attributes_name:
-                setattr(self, key, value)
+        else:
+            for key, value in kwargs.items():
+                if key in attributes_name:
+                    setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns the Represenation Dict of the square"""
