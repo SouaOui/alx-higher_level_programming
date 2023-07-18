@@ -25,8 +25,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """print the information of a class in good way"""
-        return "[square] ({}) {}/{} - {}\
-                      ".format(self.id, self.x, self.y, self.width)
+        return ("[square] ({}) {}/{} - {}\
+                      ".format(self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
         """public method to update attributes"""
