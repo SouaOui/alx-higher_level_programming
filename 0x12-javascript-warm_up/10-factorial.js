@@ -9,4 +9,6 @@ function factorial (n) {
 }
 if (!isNaN(n)) {
   console.log(factorial(n));
+} else {
+  console.log(1);
 }
