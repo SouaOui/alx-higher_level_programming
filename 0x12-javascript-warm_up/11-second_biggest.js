@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const args = process.argv;
 const length = args.length;
-if (length === 2 || length === 1) {
+if (length === 2 || length === 1 || length === 3) {
   console.log(0);
 } else {
   let max = parseInt(args[2]);
