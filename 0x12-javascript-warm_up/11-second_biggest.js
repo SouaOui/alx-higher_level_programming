@@ -1,14 +1,10 @@
 #!/usr/bin/node
 const args = process.argv;
+args.splice(0, 2).sort();
+console.log(args);
 const length = args.length;
-if (length === 2 || length === 1 || length === 3) {
+if (length === 0 || length === 1) {
   console.log(0);
 } else {
-  let max = parseInt(args[2]);
-  for (let i = 0; i < length; i++) {
-    if (parseInt(args[i]) > max) {
-      max = parseInt(args[i]);
-    }
-  }
-  console.log(max);
+    console.log(args[length - 2]);
 }
