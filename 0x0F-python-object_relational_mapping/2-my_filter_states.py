@@ -8,7 +8,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cur = conn.cursor()
     # HERE I have to know SQL to grab all states in my database
-    cur.execute("SELECT * FROM states WHERE name='{}' \
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' \
         ORDER BY id ASC".format(sys.argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
