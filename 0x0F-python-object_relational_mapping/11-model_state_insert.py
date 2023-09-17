@@ -19,6 +19,8 @@ if __name__ == "__main__":
     # state = session.query(State.id).where(State.name == name_state).first()
     new_state = State(name='Louisiana')
     session.add(new_state)
+    # Commit the session to persist the changes
+    session.commit()
     # print(state) -> None so the add didn't return anything
     # state = session.query(State.id).where(State.name == 'Louisiana').first()
     state = session.query(State.id).where(State.name == new_state.name).first()
