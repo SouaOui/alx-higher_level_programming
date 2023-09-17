@@ -6,15 +6,14 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-if __name__ == "__main__":
-    class State(Base):
-        """Create a State class to represent the states table in db
+class State(Base):
+    """Create a State class to represent the states table in db
 
-        Args:
-            State  (id): id of the state
-            state  (name): name of the state
-        """
-        __tablename__ = 'states'
+    Attributes:
+        State  (id): id of the state
+        state  (name): name of the state
+    """
+    __tablename__ = 'states'
 
-        id = Column(Integer, primary_key=True)
-        name = Column(String(128), nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(128), nullable=False)
