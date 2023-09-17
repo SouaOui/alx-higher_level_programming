@@ -14,11 +14,11 @@ if __name__ == "__main__":
                     WHERE s.name=%s
                     ORDER BY c.id ASC""", (sys.argv[4], ))
     cities = cur.fetchall()
-    for i, city in enumerate(cities):
-        if i == len(cities)-1:
-            print(city[0])
-        else:
-            print(city[0], end=", ")
-    # SIMO print(', '.join(tuple(city[0] for city in cities)))
+    # for i, city in enumerate(cities):
+    #     if i == len(cities)-1:
+    #         print(city[0])
+    #     else:
+    #         print(city[0], end=", ")
+    print(', '.join(tuple(city[0] for city in cities)))
     cur.close()
     conn.close()
