@@ -22,7 +22,4 @@ if __name__ == "__main__":
     # print(state) -> None so the add didn't return anything
     # state = session.query(State.id).where(State.name == 'Louisiana').first()
     state = session.query(State.id).where(State.name == new_state.name).first()
-    if state:
-        print(state.id)
-    else:
-        print('Not found')
+    print(state.id)
