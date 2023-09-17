@@ -23,4 +23,5 @@ if __name__ == "__main__":
     # update({state.name:'New Mexico'})
     session.query(State).filter(State.id == 2).update(
         {State.name: 'New Mexico'})
+    # Commit the session to persist the changes
     session.commit()
