@@ -8,11 +8,11 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cur = conn.cursor()
     # HERE I have to know SQL to grab all states in my database
-    cur.execute("""SELECT c.name FROM cities AS c
-                JOIN states AS s
-                ON c.state_id=s.id
-                WHERE s.name=%(state_name)s
-                ORDER BY c.id ASC""", {'state_name': sys.argv[4]})
+    cur.execute(""" SELECT c.name FROM cities AS c
+                    JOIN states AS s
+                    ON c.state_id=s.id
+                    WHERE s.name=%(state_name)s
+                    ORDER BY c.id ASC""", {'state_name': sys.argv[4]})
     cities = cur.fetchall()
     for i, city in enumerate(cities):
         if i == len(cities)-1:
