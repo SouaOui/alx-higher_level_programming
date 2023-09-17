@@ -21,6 +21,6 @@ if __name__ == "__main__":
     session = Session()
     # state = session.query(State).where(State.id ==2).
     # update({state.name:'New Mexico'})
-    session.query(State).filter(State.id == 1).update(
+    session.query(State).filter(State.id == 2).update(
         {State.name: 'New Mexico'})
     session.commit()
