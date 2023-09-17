@@ -15,7 +15,6 @@ if __name__ == "__main__":
     engine = create_engine(sentence.format(
         username, password, database), pool_pre_ping=True)
     Base.metadata.create_all(engine)
-    
     Session = sessionmaker(bind=engine)
     session = Session()
     # state = session.query(State.id).where(State.name == name_state).first()
