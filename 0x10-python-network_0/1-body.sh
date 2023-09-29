@@ -1,3 +1,3 @@
 #!/bin/bash
-# takes in a URL, sends a GET request to the URL, and displays the body of the response
-curl -sL GET "$1"
+# GET a http request only with status 200
+curl -sL "$1"
