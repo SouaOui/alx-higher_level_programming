@@ -14,7 +14,8 @@ import urllib.parse
 if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
-    data_encoded = urllib.parse.urlencode(email).encode('utf-8')
+    form = {"email": sys.argv[2]}
+    data_encoded = urllib.parse.urlencode(form).encode('utf-8')
     try:
         response = urllib.request.Request(url, data_encoded, method='POST')
         with urllib.request.urlopen(response) as f:
