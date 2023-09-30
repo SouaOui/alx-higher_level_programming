@@ -12,12 +12,14 @@ import urllib.request
 import urllib.parse
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-    email = sys.argv[2]
-    data_encoded = urllib.parse.urlencode(email).encode('utf-8')
     try:
+        url = sys.argv[1]
+        email = sys.argv[2]
+        data_encoded = urllib.parse.urlencode(email).encode('utf-8')
         response = urllib.request.Request(url, data_encoded, method='POST')
         with urllib.request.urlopen(response) as f:
-            print(f.read().decode('utf-8'))
+            response = f.read().decode('utf-8')
+            print(response)
     except Exception as f:
         print('An Error Occured :{}'.format(f))
+
