@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  """
+"""  document goes here """
 import requests
 import sys
 
